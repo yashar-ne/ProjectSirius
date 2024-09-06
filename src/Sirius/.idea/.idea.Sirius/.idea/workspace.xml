@@ -14,46 +14,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79836e8e-63cf-46b1-9454-b72ab708be2e" name="Changes" comment="added solution skeleton">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Sirius/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Sirius/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Sirius/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Sirius/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Sirius/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/LanguageModel/Sirius.LanguageModel.Application/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/LanguageModel/Sirius.LanguageModel.Application/Class1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/LanguageModel/Sirius.LanguageModel.Application/Sirius.LanguageModel.Application.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/LanguageModel/Sirius.LanguageModel.Domain/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/LanguageModel/Sirius.LanguageModel.Domain/Class1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/LanguageModel/Sirius.LanguageModel.Domain/Sirius.LanguageModel.Domain.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/LanguageModel/Sirius.LanguageModel.Infrastructure/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/LanguageModel/Sirius.LanguageModel.Infrastructure/Class1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/LanguageModel/Sirius.LanguageModel.Infrastructure/Sirius.LanguageModel.Infrastructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Application/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Application/Class1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Application/Sirius.Scraping.Application.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/Class1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/Sirius.Scraping.Domain.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Infrastructure/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Infrastructure/Class1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Infrastructure/Sirius.Scraping.Infrastructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/User/Sirius.User.Application/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/User/Sirius.User.Application/Class1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/User/Sirius.User.Application/Sirius.User.Application.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/User/Sirius.User.Domain/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/User/Sirius.User.Domain/Class1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/User/Sirius.User.Domain/Sirius.User.Domain.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/User/Sirius.User.Infrastructure/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/User/Sirius.User.Infrastructure/Class1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/User/Sirius.User.Infrastructure/Sirius.User.Infrastructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sirius.API/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sirius.API/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sirius.API/Sirius.API.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sirius.API/Sirius.API.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sirius.API/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sirius.API/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sirius.sln" afterDir="false" />
+    <list default="true" id="79836e8e-63cf-46b1-9454-b72ab708be2e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/Entities/Base.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/Entities/Form.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/Enums/FormType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sirius/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sirius/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Application/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/Class1.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +49,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -223,8 +191,18 @@
       <option name="presentableId" value="Default" />
       <updated>1723730610180</updated>
       <workItem from="1723730612018" duration="2377000" />
-      <workItem from="1723734064062" duration="326000" />
+      <workItem from="1723734064062" duration="341000" />
+      <workItem from="1725609580519" duration="4187000" />
     </task>
+    <task id="LOCAL-00001" summary="added solution skeleton">
+      <option name="closed" value="true" />
+      <created>1723734397680</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723734397680</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
