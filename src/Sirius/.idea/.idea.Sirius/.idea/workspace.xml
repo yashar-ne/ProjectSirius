@@ -14,13 +14,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79836e8e-63cf-46b1-9454-b72ab708be2e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/Entities/Base.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/Entities/Form.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/Enums/FormType.cs" afterDir="false" />
+    <list default="true" id="79836e8e-63cf-46b1-9454-b72ab708be2e" name="Changes" comment="Added Form, Base Entities and FormType Enum, Cleanup">
+      <change afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Infrastructure/Data/ApplicationDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sirius/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sirius/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Application/Class1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/Entities/Form.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Domain/Entities/Form.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Infrastructure/Class1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Infrastructure/Sirius.Scraping.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Modules/Scraping/Sirius.Scraping.Infrastructure/Sirius.Scraping.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sirius.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Sirius.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sirius.API/Sirius.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirius.API/Sirius.API.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +182,31 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="Sirius.API/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="sirius.api" />
+          <option name="containerName" value="sirius.api" />
+          <option name="contextFolderPath" value="$PROJECT_DIR$" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8080" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Sirius.API/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -192,7 +218,7 @@
       <updated>1723730610180</updated>
       <workItem from="1723730612018" duration="2377000" />
       <workItem from="1723734064062" duration="341000" />
-      <workItem from="1725609580519" duration="4187000" />
+      <workItem from="1725609580519" duration="7969000" />
     </task>
     <task id="LOCAL-00001" summary="added solution skeleton">
       <option name="closed" value="true" />
@@ -202,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723734397680</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Form, Base Entities and FormType Enum, Cleanup">
+      <option name="closed" value="true" />
+      <created>1725619628851</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725619628851</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +247,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="added solution skeleton" />
-    <option name="LAST_COMMIT_MESSAGE" value="added solution skeleton" />
+    <MESSAGE value="Added Form, Base Entities and FormType Enum, Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Form, Base Entities and FormType Enum, Cleanup" />
   </component>
 </project>
