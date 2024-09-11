@@ -1,0 +1,13 @@
+﻿# version: '3.4'
+services:
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=app
+      - POSTGRES_DB=sirius
+    volumes:
+      - ./volumes/data/db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    command: postgres -c listen_addresses='*'
