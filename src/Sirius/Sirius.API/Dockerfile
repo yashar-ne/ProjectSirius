@@ -7,6 +7,7 @@ COPY Sirius.API/*.csproj ./Sirius.API/
 COPY Modules/Scraping/Sirius.Scraping.Application/*.csproj ./Modules/Scraping/Sirius.Scraping.Application/
 COPY Modules/Scraping/Sirius.Scraping.Domain/*.csproj ./Modules/Scraping/Sirius.Scraping.Domain/
 COPY Modules/Scraping/Sirius.Scraping.Infrastructure/*.csproj ./Modules/Scraping/Sirius.Scraping.Infrastructure/
+COPY Modules/Common/*.csproj ./Modules/Common/
 RUN dotnet restore
 
 # Copy everything else and build
@@ -14,6 +15,7 @@ COPY Sirius.API/ ./Sirius.API/
 COPY Modules/Scraping/Sirius.Scraping.Application/. ./Modules/Scraping/Sirius.Scraping.Application/
 COPY Modules/Scraping/Sirius.Scraping.Domain/. ./Modules/Scraping/Sirius.Scraping.Domain/
 COPY Modules/Scraping/Sirius.Scraping.Infrastructure/. ./Modules/Scraping/Sirius.Scraping.Infrastructure/
+COPY Modules/Common/. ./Modules/Common/
 
 WORKDIR /app/Sirius.API
 RUN dotnet publish -c Release -o out
