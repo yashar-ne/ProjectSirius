@@ -25,6 +25,6 @@ FROM mcr.microsoft.com/dotnet/runtime:8.0 AS runtime
 
 WORKDIR /app
 
-COPY --from=build /app/out .
+COPY --from=build /app/Sirius.API/out .
 
-ENTRYPOINT ["dotnet", "publisher_api.dll"]
+ENTRYPOINT ["dotnet", "Sirius.API.dll"]
