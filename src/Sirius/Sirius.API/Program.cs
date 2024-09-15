@@ -1,5 +1,6 @@
 using Sirius.API.Extensions;
 using Sirius.Infrastructure;
+using Sirius.Infrastructure.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,10 +11,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.RegisterServices();
-builder.Services.AddInfrastructureServices();
+builder.Services.RegisterServices();
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-app.RegisterEndpointDefinitions();
 
 // Configure the HTTP request pipeline.
 // if (app.Environment.IsDevelopment())
@@ -24,4 +28,5 @@ app.RegisterEndpointDefinitions();
 
 app.UseHttpsRedirection();
 
+app.MapControllers();
 app.Run();

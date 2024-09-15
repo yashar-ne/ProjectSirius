@@ -5,7 +5,7 @@ using Sirius.Application.Forms.Queries;
 
 namespace Sirius.API.Extensions;
 
-public static class WebApplicationBuilderExtensions
+public static class ConfigureApiServices
 {
     public static void RegisterServices(this WebApplicationBuilder builder)
     {

@@ -9,12 +9,6 @@ public class GetFormQueryHandler (IFormsRepository repository): IRequestHandler<
     public async Task<FormDto> Handle(GetFormQuery request, CancellationToken cancellationToken)
     {
         var form = await repository.GetByIdAsync(request.FormId);
-        if (form is null)
-        {
-            return null;
-        }
-        return new FormDto(form.Id, form.Title, form.Description, form.FormType, form.Url);
-        // return new FormDto(1, "Some Title", "Some Description", FormType.Webform, "https://www.google.com");
-        
+        return form is null ? null : new FormDto(form.Id, form.Title, form.Description, form.FormType, form.Url);
     }
 }
