@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="MediatR" Version="12.4.1" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
           <PrivateAssets>all</PrivateAssets>
@@ -18,6 +19,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Modules\Common\Common.csproj" />
+      <ProjectReference Include="..\Modules\Scraping\Sirius.Scraping.Application\Sirius.Scraping.Application.csproj" />
       <ProjectReference Include="..\Modules\Scraping\Sirius.Scraping.Infrastructure\Sirius.Scraping.Infrastructure.csproj" />
     </ItemGroup>
 

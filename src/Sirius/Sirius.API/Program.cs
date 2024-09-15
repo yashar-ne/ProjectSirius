@@ -1,8 +1,11 @@
 using Common.Data;
 using System;
 using System.Configuration;
+using System.Reflection;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Sirius.API.Extensions;
+using Sirius.Scraping.Application.Forms.Queries;
 
 
 var builder = WebApplication.CreateBuilder(args);
