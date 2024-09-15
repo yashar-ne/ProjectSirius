@@ -1,5 +1,4 @@
 using MediatR;
-using Sirius.Core.Enums;
 
 namespace Sirius.Application.Forms.Queries;
 
