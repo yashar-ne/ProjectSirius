@@ -1,4 +1,5 @@
 using Sirius.API.Extensions;
+using Sirius.Infrastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.RegisterServices();
+builder.Services.AddInfrastructureServices();
 
 var app = builder.Build();
 app.RegisterEndpointDefinitions();

@@ -10,7 +10,7 @@ using Sirius.Infrastructure.Data;
 
 namespace Sirius.Infrastructure.Migrations
 {
-    [DbContext(typeof(ScrapingDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     partial class ScrapingDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

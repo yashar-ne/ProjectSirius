@@ -14,6 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Sirius.Application\Sirius.Application.csproj" />
       <ProjectReference Include="..\Sirius.Core\Sirius.Core.csproj" />
     </ItemGroup>
 

@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Sirius.Application.Forms;
 using Sirius.Application.Forms.Queries;
@@ -18,6 +19,7 @@ public class FormEndpoints : IEndpoint
 
     private Task<FormDto> GetFormById([FromServices] IMediator mediator, [FromRoute] int id)
     {
-        return mediator.Send(new GetFormQuery(id));
+        var result = mediator.Send(new GetFormQuery(id));
+        return result;
     }
 }

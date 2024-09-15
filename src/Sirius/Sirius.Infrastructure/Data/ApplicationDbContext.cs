@@ -4,11 +4,11 @@ using Sirius.Core.Entities;
 
 namespace Sirius.Infrastructure.Data;
 
-public class ScrapingDbContext: DbContext
+public class ApplicationDbContext: DbContext
 {
     protected readonly IConfiguration Configuration;
 
-    public ScrapingDbContext(IConfiguration configuration)
+    public ApplicationDbContext(IConfiguration configuration)
     {
         this.Configuration = configuration;
     }
