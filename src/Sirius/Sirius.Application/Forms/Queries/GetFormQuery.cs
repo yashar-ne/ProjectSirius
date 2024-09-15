@@ -1,7 +1,7 @@
 using MediatR;
-using Sirius.Scraping.Domain.Enums;
+using Sirius.Core.Enums;
 
-namespace Sirius.Scraping.Application.Forms.Queries;
+namespace Sirius.Application.Forms.Queries;
 
 public record GetFormQuery(int FormId) : IRequest<FormDto>;
 public class GetFormQueryHandler : IRequestHandler<GetFormQuery, FormDto>

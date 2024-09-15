@@ -1,6 +1,6 @@
-using Sirius.Scraping.Domain.Enums;
+using Sirius.Core.Enums;
 
-namespace Sirius.Scraping.Domain.Entities;
+namespace Sirius.Core.Entities;
 
 public class Form : Base<int>
 {

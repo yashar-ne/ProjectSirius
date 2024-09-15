@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Sirius.Scraping.Domain.Entities;
+namespace Sirius.Core.Entities;
 
 public class Base<T>
 {

@@ -1,4 +1,4 @@
-namespace Sirius.Scraping.Domain.Enums;
+namespace Sirius.Core.Enums;
 
 public enum FormType
 {

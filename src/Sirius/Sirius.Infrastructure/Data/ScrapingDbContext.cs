@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Sirius.Scraping.Domain.Entities;
+using Sirius.Core.Entities;
 
-namespace Common.Data;
+namespace Sirius.Infrastructure.Data;
 
 public class ScrapingDbContext: DbContext
 {

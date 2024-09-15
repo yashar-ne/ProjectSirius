@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Scraping\Sirius.Scraping.Domain\Sirius.Scraping.Domain.csproj" />
+      <ProjectReference Include="..\Sirius.Core\Sirius.Core.csproj" />
     </ItemGroup>
 
 </Project>

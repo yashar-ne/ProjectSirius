@@ -18,9 +18,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Modules\Common\Common.csproj" />
-      <ProjectReference Include="..\Modules\Scraping\Sirius.Scraping.Application\Sirius.Scraping.Application.csproj" />
-      <ProjectReference Include="..\Modules\Scraping\Sirius.Scraping.Infrastructure\Sirius.Scraping.Infrastructure.csproj" />
+      <ProjectReference Include="..\Sirius.Infrastructure\Sirius.Infrastructure.csproj" />
+      <ProjectReference Include="..\Sirius.Application\Sirius.Application.csproj" />
     </ItemGroup>
 
 </Project>

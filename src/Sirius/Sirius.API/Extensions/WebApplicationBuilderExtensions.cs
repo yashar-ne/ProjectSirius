@@ -1,6 +1,7 @@
-using Common.Data;
+
+using Sirius.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using Sirius.Scraping.Application.Forms.Queries;
+using Sirius.Application.Forms.Queries;
 
 namespace Sirius.API.Extensions;
 

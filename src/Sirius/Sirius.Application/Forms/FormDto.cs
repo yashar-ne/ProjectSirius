@@ -1,5 +1,6 @@
-using Sirius.Scraping.Domain.Enums;
+using Sirius.Core.Enums;
 
-namespace Sirius.Scraping.Application.Forms;
+
+namespace Sirius.Application.Forms;
 
 public record FormDto(int Id, string Title, string Description, FormType FormType, string Url);

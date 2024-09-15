@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sirius.Scraping.Domain\Sirius.Scraping.Domain.csproj" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="12.4.1" />
+    <ProjectReference Include="..\Sirius.Core\Sirius.Core.csproj" />
   </ItemGroup>
 
 </Project>

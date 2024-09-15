@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace Common.Migrations
+namespace Sirius.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration
@@ -20,6 +20,7 @@ namespace Common.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Title = table.Column<string>(type: "text", nullable: true),
                     Description = table.Column<string>(type: "text", nullable: true),
+                    FormType = table.Column<int>(type: "integer", nullable: true),
                     Url = table.Column<string>(type: "text", nullable: true),
                     EntryBy = table.Column<int>(type: "integer", nullable: true),
                     EntryDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),

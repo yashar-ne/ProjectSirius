@@ -1,7 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Sirius.Scraping.Application.Forms;
-using Sirius.Scraping.Application.Forms.Queries;
+using Sirius.Application.Forms;
+using Sirius.Application.Forms.Queries;
 
 namespace Sirius.API.Endpoints;
 
