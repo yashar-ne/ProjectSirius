@@ -9,7 +9,6 @@ public class ApplicationDbContext(IConfiguration configuration) : DbContext, IAp
 {
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
-        // connect to postgres with connection string from app settings
         options.UseNpgsql(configuration.GetConnectionString("WebApiDatabase"));
     }
     
