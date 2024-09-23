@@ -1,5 +1,8 @@
+using Microsoft.EntityFrameworkCore;
 using Sirius.API.Extensions;
-using Sirius.Infrastructure;
+using Sirius.Application;
+using Sirius.Application.Forms.Queries;
+using Sirius.Infrastructure.Data;
 using Sirius.Infrastructure.Extensions;
 
 
@@ -14,7 +17,6 @@ builder.RegisterServices();
 builder.Services.RegisterServices();
 
 builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

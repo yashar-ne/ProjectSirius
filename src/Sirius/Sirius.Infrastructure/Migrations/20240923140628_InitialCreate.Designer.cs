@@ -12,7 +12,7 @@ using Sirius.Infrastructure.Data;
 namespace Sirius.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240915083251_InitialCreate")]
+    [Migration("20240923140628_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
