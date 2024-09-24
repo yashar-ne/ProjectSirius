@@ -3,7 +3,7 @@ using Sirius.Core.Enums;
 
 namespace Sirius.Application.Forms;
 
-public record FormDto : BaseDto<int>
+public record FormDto
 {
     public string? Title { get; set; }
     public string? Description { get; set; }

@@ -1,3 +1,5 @@
+using System.Net;
+using System.Text;
 using MediatR;
 using Sirius.Core.Enums;
 
@@ -7,13 +9,22 @@ public record GetFormTypeFromUriQuery(string Uri) : IRequest<FormTypeDto>;
 
 public class GetFormTypeFromUriQueryHandler(IApplicationDbContext context) : IRequestHandler<GetFormTypeFromUriQuery, FormTypeDto>
 {
-    public Task<FormTypeDto> Handle(GetFormTypeFromUriQuery request, CancellationToken cancellationToken)
+    public async Task<FormTypeDto> Handle(GetFormTypeFromUriQuery request, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        var content = await GetWebsiteContentFromUri(request.Uri);
+
+        if (content.ToLower().StartsWith("%pdf"))
+            return new FormTypeDto(FormType.Pdf);
+       
+        if (content.ToLower().Contains("<input"))
+            return new FormTypeDto(FormType.Webform);
+        
+        return new FormTypeDto(FormType.Unspecified);
     }
 
-    private string GetWebsiteContentFromUri(Uri uri)
+    private async Task<string> GetWebsiteContentFromUri(string uri)
     {
-        return String.Empty;
+        HttpClient client = new HttpClient();
+        return await client.GetStringAsync(uri);
     }
 }

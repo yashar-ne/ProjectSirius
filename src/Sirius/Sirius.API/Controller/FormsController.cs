@@ -13,4 +13,10 @@ public class FormsController : Microsoft.AspNetCore.Mvc.Controller
     {
         return Results.Ok(await mediator.Send(new GetFormQuery(id)));
     }
+    
+    [HttpPost]
+    public async Task<IResult> GetFormTypeFromUrl([FromServices] IMediator mediator, [FromBody] string url)
+    {
+        return Results.Ok(await mediator.Send(new GetFormTypeFromUriQuery(url)));
+    }
 }

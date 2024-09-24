@@ -5,4 +5,5 @@ public enum FormType
     Webform = 0,
     Pdf = 1,
     Image = 2,
+    Unspecified = 3,
 }
