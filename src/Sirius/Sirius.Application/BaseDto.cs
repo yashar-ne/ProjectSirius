@@ -1,10 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Sirius.Core.Entities;
+namespace Sirius.Application;
 
-public class Base<T>
+public record BaseDto<T>
 {
-    [Key]
     public required T Id { get; set; }
     public int? EntryBy { get; set; }
     public DateTime? EntryDate { get; set; }

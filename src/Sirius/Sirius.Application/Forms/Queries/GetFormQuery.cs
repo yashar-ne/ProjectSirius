@@ -9,6 +9,7 @@ public class GetFormQueryHandler(IApplicationDbContext context) : IRequestHandle
     public async Task<FormDto> Handle(GetFormQuery request, CancellationToken cancellationToken)
     {
         var form = await context.Forms.FindAsync(request.FormId, cancellationToken);
-        return form.Adapt<FormDto>();
+        var dto = form.Adapt<FormDto>();
+        return dto;
     }
 }

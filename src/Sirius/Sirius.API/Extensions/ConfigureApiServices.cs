@@ -8,7 +8,7 @@ namespace Sirius.API.Extensions;
 
 public static class ConfigureApiServices
 {
-    public static void RegisterServices(this WebApplicationBuilder builder)
+    public static void RegisterApiServices(this WebApplicationBuilder builder)
     {
         builder.Configuration.GetConnectionString("SQLServer");
         builder.Services.AddDbContext<ApplicationDbContext>(options => {options.UseNpgsql(); });

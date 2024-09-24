@@ -6,7 +6,7 @@ namespace Sirius.Infrastructure.Extensions;
 
 public static class ConfigureInfrastructureServices
 {
-    public static IServiceCollection RegisterServices(this IServiceCollection services)
+    public static IServiceCollection RegisterConfigureInfrastructureServices(this IServiceCollection services)
     {
         services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
         return services;

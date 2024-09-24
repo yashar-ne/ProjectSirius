@@ -1,4 +1,5 @@
 using Sirius.API.Extensions;
+using Sirius.Application;
 using Sirius.Infrastructure.Extensions;
 
 
@@ -9,8 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.RegisterServices();
-builder.Services.RegisterServices();
+
+builder.RegisterApiServices();
+builder.Services.RegisterConfigureInfrastructureServices();
+builder.Services.RegisterApplicationMapsterConfiguration();
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
