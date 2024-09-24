@@ -1,3 +1,4 @@
+using Mapster;
 using MediatR;
 
 namespace Sirius.Application.Forms.Queries;
@@ -8,6 +9,6 @@ public class GetFormQueryHandler(IApplicationDbContext context) : IRequestHandle
     public async Task<FormDto> Handle(GetFormQuery request, CancellationToken cancellationToken)
     {
         var form = await context.Forms.FindAsync(request.FormId, cancellationToken);
-        return form is null ? null : new FormDto(form.Id, form.Title, form.Description, form.FormType, form.Url);
+        return form.Adapt<FormDto>();
     }
 }
