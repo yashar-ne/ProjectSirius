@@ -13,11 +13,14 @@ public class GetFormTypeFromUriQueryHandler(IApplicationDbContext context) : IRe
     {
         var content = await GetWebsiteContentFromUri(request.Uri);
 
-        if (content.ToLower().StartsWith("%pdf"))
+        if (content.ToLower().StartsWith("%pdf-1."))
             return new FormTypeDto(FormType.Pdf);
        
-        if (content.ToLower().Contains("<input"))
+        if (content.ToLower().Contains("<form") && content.ToLower().Contains("<input"))
             return new FormTypeDto(FormType.Webform);
+        
+        if (await IsUrlLeadingToImage(request.Uri))
+            return new FormTypeDto(FormType.Image);
         
         return new FormTypeDto(FormType.Unspecified);
     }
@@ -25,6 +28,18 @@ public class GetFormTypeFromUriQueryHandler(IApplicationDbContext context) : IRe
     private async Task<string> GetWebsiteContentFromUri(string uri)
     {
         HttpClient client = new HttpClient();
+        client.DefaultRequestHeaders.Add("User-Agent", "other");
         return await client.GetStringAsync(uri);
+    }
+    
+    private async Task<bool> IsUrlLeadingToImage(string url)
+    {
+        HttpClient client = new HttpClient();
+        client.DefaultRequestHeaders.Add("User-Agent", "other");
+        var site = await client.GetAsync(url);
+        if (site.Content.Headers.ContentType.MediaType.Contains("image"))
+            return true;
+        
+        return false;
     }
 }
