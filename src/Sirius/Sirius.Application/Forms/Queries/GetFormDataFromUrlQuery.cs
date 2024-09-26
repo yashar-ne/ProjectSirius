@@ -7,17 +7,17 @@ using WDSE.ScreenshotMaker;
 
 namespace Sirius.Application.Forms.Queries;
 
-public record GetFormDataFromUrlQuery(string Uri) : IRequest<FormDataDto>;
+public record GetFormDataFromUrlQuery(string Url) : IRequest<FormDataDto>;
 
 public class GetFormDataFromUrlQueryHandler() : IRequestHandler<GetFormDataFromUrlQuery, FormDataDto>
 {
     public async Task<FormDataDto> Handle(GetFormDataFromUrlQuery request, CancellationToken cancellationToken)
     {
-        var content = await GetWebsiteContentFromUrl(request.Uri);
-        var formType = await GetFormTypeFromContent(content, request.Uri);
-        var screenshot = GetScreenshotFromUrlAsBase64(request.Uri);
+        var content = await GetWebsiteContentFromUrl(request.Url);
+        var formType = await GetFormTypeFromContent(content, request.Url);
+        var screenshot = GetScreenshotFromUrlAsBase64(request.Url);
        
-        return new FormDataDto(request.Uri, formType, content, screenshot);
+        return new FormDataDto(request.Url, formType, content, screenshot);
     }
     
     private async Task<FormType> GetFormTypeFromContent(string content, string url)
