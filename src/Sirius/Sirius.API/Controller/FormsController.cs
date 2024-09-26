@@ -15,8 +15,8 @@ public class FormsController : Microsoft.AspNetCore.Mvc.Controller
     }
     
     [HttpPost]
-    public async Task<IResult> GetFormTypeFromUrl([FromServices] IMediator mediator, [FromBody] string url)
+    public async Task<IResult> GetDataFromUrl([FromServices] IMediator mediator, [FromBody] string url)
     {
-        return Results.Ok(await mediator.Send(new GetFormTypeFromUriQuery(url)));
+        return Results.Ok(await mediator.Send(new GetFormDataFromUrlQuery(url)));
     }
 }
