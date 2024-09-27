@@ -1,6 +1,7 @@
 using MediatR;
 using Sirius.Core.Enums;
 using OpenQA.Selenium.Chrome;
+using Sirius.Application.Interfaces;
 using WDSE;
 using WDSE.Decorators;
 using WDSE.ScreenshotMaker;

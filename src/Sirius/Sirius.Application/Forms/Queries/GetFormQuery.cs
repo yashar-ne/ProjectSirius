@@ -1,5 +1,6 @@
 using Mapster;
 using MediatR;
+using Sirius.Application.Interfaces;
 
 namespace Sirius.Application.Forms.Queries;
 

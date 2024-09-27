@@ -1,5 +1,6 @@
 using OpenQA.Selenium.Chrome;
 using Sirius.Application.Forms;
+using Sirius.Application.Interfaces;
 using Sirius.Core.Enums;
 using WDSE;
 using WDSE.Decorators;

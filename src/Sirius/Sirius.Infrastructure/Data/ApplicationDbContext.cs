@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Sirius.Application;
+using Sirius.Application.Interfaces;
 using Sirius.Core.Entities;
 
 namespace Sirius.Infrastructure.Data;

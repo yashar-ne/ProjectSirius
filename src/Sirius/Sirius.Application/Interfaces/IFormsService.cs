@@ -1,6 +1,6 @@
 using Sirius.Core.Enums;
 
-namespace Sirius.Application.Forms;
+namespace Sirius.Application.Interfaces;
 
 public interface IFormsService
 {

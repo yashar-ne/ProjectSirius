@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Sirius.Core.Entities;
 
-namespace Sirius.Application;
+namespace Sirius.Application.Interfaces;
 
 public interface IApplicationDbContext
 {

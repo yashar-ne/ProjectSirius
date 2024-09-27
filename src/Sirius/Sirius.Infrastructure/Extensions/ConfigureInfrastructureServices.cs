@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Sirius.Application;
 using Sirius.Application.Forms;
+using Sirius.Application.Interfaces;
 using Sirius.Infrastructure.Data;
 using Sirius.Infrastructure.Services;
 
@@ -12,6 +13,7 @@ public static class ConfigureInfrastructureServices
     {
         services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
         services.AddScoped<IFormsService, FormsService>();
+        services.AddScoped<IMlService, MlService>();
         return services;
     }
 }
