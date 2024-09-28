@@ -19,10 +19,4 @@ public class FormsController : Microsoft.AspNetCore.Mvc.Controller
     {
         return Results.Ok(await mediator.Send(new GetFormDataFromUrlQuery(url)));
     }
-    
-    [HttpGet]
-    public async Task<IResult> GetChatCompletionTest([FromServices] IMediator mediator)
-    {
-        return Results.Ok(await mediator.Send(new GetFormFieldsFromSourceCodeQuery("<html></html>")));
-    }
 }
