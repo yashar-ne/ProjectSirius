@@ -21,4 +21,14 @@ public class MlController : Microsoft.AspNetCore.Mvc.Controller
     {
         return Results.Ok(await mediator.Send(new GetFormFieldsFromUrlQuery(url)));
     }
+    
+    [HttpPost]
+    [Route("GetFormFieldsFromPdf")]
+    public async Task<IResult> GetFormFieldsFromPdf([FromServices] IMediator mediator, IFormFile pdf)
+    {
+        using var stream = new MemoryStream();
+        await pdf.CopyToAsync(stream);
+        var fileBytes = stream.ToArray();
+        return Results.Ok(await mediator.Send(new GetFormFieldsFromPdfQuery(fileBytes)));
+    }
 }
